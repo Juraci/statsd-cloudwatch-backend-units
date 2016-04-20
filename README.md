@@ -31,7 +31,7 @@ Add the following basic configuration information to the StatsD configuration fi
 
     {
         cloudwatch: {
-            namespace:  "CheckinService",
+            namespace:  "my.app",
             region: "us-west-2",
             dimensions: {},
             
