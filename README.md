@@ -34,7 +34,8 @@ Add the following basic configuration information to the StatsD configuration fi
             namespace:  "CheckinService",
             region: "us-west-2",
             dimensions: {},
-            // My hack allows to overwrite the unit type according to the metric name
+            
+            // My hack allows you to overwrite the unit type according to the metric name
             units: {
                 'Status':'Count',
                 'Time':'Milliseconds',
@@ -43,6 +44,7 @@ Add the following basic configuration information to the StatsD configuration fi
                 'CheckinService.DbWrite.Count':'Count',
                 'CheckinService.DbRead.Count':'Count'
         },
+        
         accessKeyId:  "your-key-id",
         secretAccessKey: "your-secret-key"
         }
