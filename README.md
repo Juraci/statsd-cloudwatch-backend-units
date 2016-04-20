@@ -31,11 +31,20 @@ Add the following basic configuration information to the StatsD configuration fi
 
     {
         cloudwatch: {
-            namespace:  "my.api",
+            namespace:  "CheckinService",
             region: "us-west-2",
             dimensions: {},
-            accessKeyId:  "<YOUR ACCESS KEY ID>",
-            secretAccessKey: "<YOUR SECRET ACCESS KEY>"
+            // My hack allows to overwrite the unit type according to the metric name
+            units: {
+                'Status':'Count',
+                'Time':'Milliseconds',
+                'Memory':'Bytes',
+                'Statistics':'Count',
+                'CheckinService.DbWrite.Count':'Count',
+                'CheckinService.DbRead.Count':'Count'
+        },
+        accessKeyId:  "your-key-id",
+        secretAccessKey: "your-secret-key"
         }
     }
 
